@@ -4,7 +4,6 @@ var Firebase = require('firebase');
 
 /* @ngInject */
 function FirebaseFactory() {
-    var firebase = require('firebase');
     const config = {
         apiKey: 'AIzaSyCo1scurrvS_AKF9RGpoLq7DIqVoTgGHTk',
         authDomain: 'tic-tac-to-c8f08.firebaseapp.com',
@@ -12,9 +11,9 @@ function FirebaseFactory() {
         storageBucket: 'tic-tac-to-c8f08.appspot.com'
     };
 
-    firebase.initializeApp(config);
+    Firebase.initializeApp(config);
 
-    return firebase;
+    return Firebase;
 }
 
 module.exports = FirebaseFactory;
