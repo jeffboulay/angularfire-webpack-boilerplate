@@ -3,8 +3,12 @@
 var Firebase = require('firebase');
 
 /* @ngInject */
-function FirebaseFactory() {
-    return new Firebase('https://tic-tac-to-c8f08.firebaseio.com');
+function FirebaseFactory(fbConfig) {
+    var firebase = require('firebase');
+
+    firebase.initializeApp(fbConfig);
+
+    return firebase;
 }
 
 module.exports = FirebaseFactory;
