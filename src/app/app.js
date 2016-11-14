@@ -7,7 +7,7 @@ require('./app.scss');
 module.exports = angular.module('boilerplate-app', [
     'ui.router',
     'firebase',
-    //require('./firebase/index').name,
+    require('./firebase/index').name,
     require('./config/index').name,
     require('./home/index').name
 ]);
